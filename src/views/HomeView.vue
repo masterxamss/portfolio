@@ -1,6 +1,6 @@
 <template>
     <main class="main-container">
-        <h1>Main Container</h1>
+        <h1 id="teste">Main Container</h1>
     </main>
 </template>
 
@@ -10,10 +10,9 @@
 
 <style scoped>
     .main-container{
-        height: 100vh;
+        height: 100%;
         background-image: url('/public/img/bg.webp');
+        overflow:scroll;
     }
-    h1{
-        padding-top: 10em;
-    }
+
 </style>

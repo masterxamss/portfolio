@@ -1,10 +1,7 @@
 <template>
-
     <Header :logo="logo_src" :alt="alt_name"/>  
-  <router-view/>
-  <Footer />
-
-  
+    <router-view/>
+    <Footer />
 </template>
 
 <script>
@@ -47,11 +44,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Slabo-Regular;
+    /* font-family: Slabo-Regular; */
   }
 
 
   #app{
-    position:relative;
+    /* position:relative; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 </style>

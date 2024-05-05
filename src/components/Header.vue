@@ -1,13 +1,13 @@
 <template>
     <header class="main-header">
-        <a href="#">
+        <a href="#teste">
             <img :src="logo" :alt="alt" id="logo">
         </a>
         <nav>
             <!-- <router-link to="/">Home</router-link> -->
             <ul class="menu">
                 <li>
-                    <a href="#" class="menu-item">HOME</a>
+                    <a href="#teste" class="menu-item">HOME</a>
                 </li>
                 <li>
                     <a href="#" class="menu-item">ABOUT</a>
@@ -36,13 +36,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: fixed;
-        top: 0;
-        left: 0;
         width: 100%;
         height: 7em;
-        background: #ecebeb;
-        box-shadow: 10px 0 10px #313131;
+        background-color: #ecebeb;
+        box-shadow: 10px 0px 10px #353434;
+        z-index: 1;
     }
 
     .menu{
@@ -68,7 +66,6 @@
         text-decoration: underline;
         background-color: #eb5f28;
         border-radius: 5px;
-        /* border: 1px solid black; */
     }
 
     #logo{

@@ -42,6 +42,7 @@
         box-shadow: 0 1px 10px #353434;
         position: sticky;
         top: 0px;
+        z-index: 1;
     }
 
     .menu{

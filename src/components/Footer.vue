@@ -8,19 +8,19 @@
             <div class="footer-social">
                 <h2>Social</h2>
                 <span>
-                    <a href="#"><img src="/img/social_icons/github.png" alt=""></a>
+                    <a href="#"><img src="../assets/img/social_icons/github.png" alt="Logo GitHub"></a>
                 </span>
                 <span>
-                    <a href="#"><img src="/img/social_icons/facebook.png" alt=""></a>
+                    <a href="#"><img src="../assets/img/social_icons/facebook.png" alt=""></a>
                 </span>
                 <span>
-                    <a href="#"><img src="/img/social_icons/instagram.png" alt=""></a>
+                    <a href="#"><img src="../assets/img/social_icons/instagram.png" alt=""></a>
                 </span>
                 <span>
-                    <a href="#"><img src="/img/social_icons/twitter.png" alt=""></a>
+                    <a href="#"><img src="../assets/img/social_icons/twitter.png" alt=""></a>
                 </span>
                 <span>
-                    <a href="#"><img src="/img/social_icons/linkedin.png" alt=""></a>
+                    <a href="#"><img src="../assets/img/social_icons/linkedin.png" alt=""></a>
                 </span>
             </div>
         </section>

@@ -11,7 +11,7 @@
 <style scoped>
     .main-container{
         height: 100%;
-        background-image: url('/public/img/bg.webp');
+        background-image: url('../assets/img/bg.webp');
         overflow:scroll;
     }
 

@@ -17,8 +17,8 @@
 
     data(){
       return{
-        logo_src: "/img/logo.png",
-        alt_name: "Logo"
+        logo_src: '/logo.png',
+        alt_name: 'Logo'
       }
     }
   }
@@ -44,12 +44,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: Slabo-Regular; */
   }
 
 
   #app{
-    /* position:relative; */
+    font-family: Slabo-Regular;
     height: 100vh;
     display: flex;
     flex-direction: column;

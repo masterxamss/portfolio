@@ -25,6 +25,12 @@
 </script>
 
 <style>
+
+  :root{
+    --main-color: #EB5E28;
+    --header-bg-color: #ecebeb;
+  }
+
   @font-face{
     font-family: 'Slabo-Regular';
     src: url(/src/assets/fonts/SlaboRegular/Slabo-Regular.ttf) format("truetype");
@@ -49,8 +55,10 @@
 
   #app{
     font-family: Slabo-Regular;
-    height: 100vh;
+    /* height: 200vh; */
+    min-width: 1040px;
     display: flex;
     flex-direction: column;
+    /* position: relative; */
   }
 </style>

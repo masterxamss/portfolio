@@ -7,10 +7,10 @@
             <!-- <router-link to="/">Home</router-link> -->
             <ul class="menu">
                 <li>
-                    <a href="#teste" class="menu-item">HOME</a>
+                    <a href="#home" class="menu-item">HOME</a>
                 </li>
                 <li>
-                    <a href="#" class="menu-item">ABOUT</a>
+                    <a href="#about" class="menu-item">ABOUT</a>
                 </li>
                 <li>
                     <a href="#" class="menu-item">PROJECTS</a>
@@ -37,10 +37,11 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        height: 7em;
-        background-color: #ecebeb;
-        box-shadow: 10px 0px 10px #353434;
-        z-index: 1;
+        height: 8em;
+        background-color: var(--header-bg-color);
+        box-shadow: 0 1px 10px #353434;
+        position: sticky;
+        top: 0px;
     }
 
     .menu{
@@ -53,10 +54,10 @@
         padding: 1em;
         text-decoration: none;
         font-weight: bold;
-        font-family: Roboto-Bold;
+        font-family: Roboto-Regular;
         font-size: 18px;
         letter-spacing: .2em;
-        color:#EB5E28;
+        color:var(--main-color);
         transition: .5s;
         margin:.2em;
     }
@@ -64,7 +65,7 @@
     .menu-item:hover{
         color: #000;
         text-decoration: underline;
-        background-color: #eb5f28;
+        background-color:var(--main-color);
         border-radius: 5px;
     }
 

@@ -1,10 +1,14 @@
 <template>
-    <main class="hero-container">
+    <main class="main-container">
         <section class="home-hero" id="home">
             <div class="home-hero__content">
-                <h1 class="heading-primary">Hey, I'm Tiago Machado</h1>
+                <h1 class="home-hero__title">Hey, I'm Tiago Machado</h1>
                 <div class="home-hero__info">
-                    <p>A Web Developer student building the Frontend and Backend of Websites and Web Applications that leads to the success of the overall product</p>
+<<<<<<< HEAD
+
+=======
+                    <p>A student Web developer who builds Frontend and Backend Websites, looking for opportunities to learn and grow in order to keep up to date with the latest trends and technologies in the sector.</p>
+>>>>>>> origin/main
                 </div>
                 <div class="home-hero__cta">
                     <a class="btn">Projects</a>
@@ -14,6 +18,43 @@
                         <span></span>
                     </div>
                 </div>
+<<<<<<< HEAD
+=======
+            </div>
+        </section>
+
+        <section class="about-container" id="about">
+            <div class="about-container__content">
+                <h2 class="about-title">About Me</h2>
+                <p>Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
+                <div class="about-separator">
+                    <div class="about-details">
+                        <h3>Come and get to know me</h3>
+                        <p>
+                            Since the beginning of my journey in web development, I've been diving headfirst into the study of programming languages such as <i>HTML</i>, <i>CSS</i> and <i>JavaScript</i> to build intuitive and attractive interfaces. At the same time, I've explored popular frameworks and libraries such as <i>React</i>, <i>Vue.js</i> and <i>Angular</i> to create dynamic and responsive experiences that captivate users.
+                            As far as the backend is concerned, I have ventured into the world of server and API development, using technologies such as <i>Node.js</i>, <i>Express</i> and <i>MongoDB</i> to create robust and scalable systems that boost the functionality of web applications.
+                        </p>
+                        <div>
+                            <a class="about-details__btn">Contact me</a>
+                            <a href="/cv/CV_TiagoMachado.pdf" download="CV_TiagoMachado.pdf" class="about-details__btn">My CV</a>
+                        </div>
+                    </div>
+                    <div class="about-skills">
+                        <h3>My Skills</h3>
+                        <span class="techs">HTML</span>
+                        <span class="techs">CSS</span>
+                        <span class="techs">JavaScript</span>
+                        <span class="techs">VueJS</span>
+                        <span class="techs">PHP</span>
+                        <span class="techs">MySQL</span>
+                        <span class="techs">Linux</span>
+                        <span class="techs">GIT</span>
+                        <span class="techs">GitHub</span>
+                        <span class="techs">Terminal</span>
+                        <span class="techs">React</span>
+                    </div>
+                </div>
+>>>>>>> origin/main
             </div>
         </section>
 
@@ -45,12 +86,11 @@
 
 <style scoped>
 
-    /* HERO CONTAINER */
-
-    .hero-container{
+    .main-container{
         background-image: url('../assets/img/bg.webp');
-        height: 1000px;
     }
+
+    /* HERO CONTAINER */
 
     .home-hero{
         display: flex;
@@ -58,6 +98,7 @@
         justify-content: center;
         align-items: center;
         width: 100%;
+        height: fit-content;
     }
 
     .home-hero__content{
@@ -65,7 +106,7 @@
         margin-top: 10em;
     }
 
-    .heading-primary{
+    .home-hero__title{
         text-align: center;
         font-size: 3em;
         margin-top: 0em;
@@ -153,7 +194,7 @@
         justify-content: center;
     }
 
-    span {
+    .scrollDown span {
         background-color: var(--main-color);
         width: 5px;
         height: 10px;
@@ -162,7 +203,7 @@
          position: relative;
     }
 
-    span::before {
+    .scrollDown span::before {
         position: absolute;
         content: '';
         width: 15px;
@@ -177,7 +218,7 @@
         animation: ani 1.8s infinite linear;
     }
 
-    span::after {
+    .scrollDown span::after {
         position: absolute;
         content: '';
         width: 15px;
@@ -208,6 +249,124 @@
             margin-top: 40px;
             opacity: 0;
         }
-    } 
+    }
+    
+    /* ABOUT SECTION */
+
+    .about-container{
+        display: flex;
+        justify-content: center;
+        margin-top: 20em;
+        width: 100%;
+    }
+
+    .about-container__content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-title{
+        text-align: center;
+        font-family: Slabo-Regular;
+        font-size: 2em;
+        border-bottom: 2px solid var(--main-color);
+    }
+
+    .about-container__content > p{
+        text-align: center;
+        font-family: Roboto-Regular;
+        font-size: 1.2em;
+        letter-spacing: .1em;
+        margin-top: 2em;
+    }
+
+    .about-separator{
+        display: flex;
+        margin-top: 3em;
+        gap: 2em;
+        width: 80%;
+    }
+
+    .about-details{
+        width: 50%;
+        font-family: Roboto-Regular;
+        font-size: 1.2em;
+        letter-spacing: .1em;
+        text-align: justify;
+        padding: 1em;
+        border: 1px solid var(--main-color);
+        border-radius: 5px;
+        background-color: hsla(0, 0%, 97%, 0.5);
+        box-shadow: 0 0 10px #353434;
+        margin-bottom: 3em;
+        color: #747272
+    }
+
+    .about-details i{
+        color: var(--main-color);
+    }
+
+    .about-details h3{
+        margin-bottom: .5em;
+        color: black;
+        font-family: Roboto-Bold;
+    }
+
+    .about-details p{
+        margin-bottom: 2em;
+    }
+
+    .about-details div{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .about-details__btn{
+        font-family: Roboto-Regular;
+        text-transform: uppercase;
+        background-color:var(--main-color);
+        color: white;
+        font-size: .8em;
+        padding: .5em 2em;
+        border-radius: 5px;
+        text-decoration: none;
+        transition:.5s;
+        cursor: pointer;
+    }
+
+    .about-details__btn:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px #aaa8a8;
+    }
+    .about-skills{
+        width: 50%;
+        font-family: Roboto-Regular;
+        font-size: 1.2em;
+        letter-spacing: .1em;
+        padding: 1em;
+        border: 1px solid var(--main-color);
+        border-radius: 5px;
+        background-color: hsla(0, 0%, 97%, 0.5);
+        box-shadow: 0 0 10px #353434;
+        margin-bottom: 3em;
+    }
+
+    .about-skills h3{
+        margin-bottom: .5em;
+        font-family: Roboto-Bold;
+    }
+
+    .techs{
+        display: inline-block;
+        padding: 1em;
+        border-radius: 5px;
+        background-color: var(--header-bg-color);
+        margin: 6px ;
+        border: 1px solid var(--main-color);
+    }
+
+
 
 </style>

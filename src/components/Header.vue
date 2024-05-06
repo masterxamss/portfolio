@@ -13,7 +13,7 @@
                     <a href="#about" class="menu-item">ABOUT</a>
                 </li>
                 <li>
-                    <a href="#" class="menu-item">PROJECTS</a>
+                    <a href="#projects" class="menu-item">PROJECTS</a>
                 </li>
                 <li>
                     <a href="#" class="menu-item">CONTACT</a>

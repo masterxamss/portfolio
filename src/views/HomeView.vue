@@ -4,11 +4,7 @@
             <div class="home-hero__content">
                 <h1 class="home-hero__title">Hey, I'm Tiago Machado</h1>
                 <div class="home-hero__info">
-<<<<<<< HEAD
-
-=======
                     <p>A student Web developer who builds Frontend and Backend Websites, looking for opportunities to learn and grow in order to keep up to date with the latest trends and technologies in the sector.</p>
->>>>>>> origin/main
                 </div>
                 <div class="home-hero__cta">
                     <a class="btn">Projects</a>
@@ -18,14 +14,12 @@
                         <span></span>
                     </div>
                 </div>
-<<<<<<< HEAD
-=======
             </div>
         </section>
 
         <section class="about-container" id="about">
             <div class="about-container__content">
-                <h2 class="about-title">About Me</h2>
+                <h2 class="topic-title">About Me</h2>
                 <p>Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
                 <div class="about-separator">
                     <div class="about-details">
@@ -54,7 +48,13 @@
                         <span class="techs">React</span>
                     </div>
                 </div>
->>>>>>> origin/main
+            </div>
+        </section>
+
+        <section class="projects-container" id="projects">
+            <div class="projects-container__content">
+                <h2 class="topic-title">Projects</h2>
+                <p>Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
             </div>
         </section>
 
@@ -267,11 +267,12 @@
         align-items: center;
     }
 
-    .about-title{
+    .topic-title{
         text-align: center;
         font-family: Slabo-Regular;
         font-size: 2em;
         border-bottom: 2px solid var(--main-color);
+        width: fit-content;
     }
 
     .about-container__content > p{
@@ -287,6 +288,7 @@
         margin-top: 3em;
         gap: 2em;
         width: 80%;
+        margin-bottom:20em;
     }
 
     .about-details{
@@ -366,6 +368,14 @@
         margin: 6px ;
         border: 1px solid var(--main-color);
     }
+
+    /* PROJECTS SECTION */
+
+    .projects-container{
+        
+    }
+
+
 
 
 

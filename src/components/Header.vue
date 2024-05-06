@@ -1,6 +1,6 @@
 <template>
     <header class="main-header">
-        <a href="#teste">
+        <a href="#home">
             <img :src="logo" :alt="alt" id="logo">
         </a>
         <nav>

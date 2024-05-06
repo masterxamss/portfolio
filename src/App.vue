@@ -55,10 +55,8 @@
 
   #app{
     font-family: Slabo-Regular;
-    /* height: 200vh; */
     min-width: 1040px;
     display: flex;
     flex-direction: column;
-    /* position: relative; */
   }
 </style>

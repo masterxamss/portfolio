@@ -4,7 +4,7 @@
             <div class="home-hero__content">
                 <h1 class="heading-primary">Hey, I'm Tiago Machado</h1>
                 <div class="home-hero__info">
-                    <p>A Web Developer building the Frontend and Backend of Websites and Web Applications that leads to the success of the overall product</p>
+                    <p>A Web Developer student building the Frontend and Backend of Websites and Web Applications that leads to the success of the overall product</p>
                 </div>
                 <div class="home-hero__cta">
                     <a class="btn">Projects</a>
@@ -14,7 +14,6 @@
                         <span></span>
                     </div>
                 </div>
-                
             </div>
         </section>
 

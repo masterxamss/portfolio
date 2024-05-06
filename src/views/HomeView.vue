@@ -33,10 +33,10 @@
                             <a href="/cv/CV_TiagoMachado.pdf" download="CV_TiagoMachado.pdf" class="about-details__btn">My CV</a>
                         </div>
                     </div>
-                    <div class="about-skills">
+                    <!-- <div class="about-skills" v-for="techs in technologies" :key="techs.id">
                         <h3>My Skills</h3>
-                        <span class="techs">HTML</span>
-                        <span class="techs">CSS</span>
+                        <span class="techs">{{ techs.name }}</span> -->
+                        <!-- <span class="techs">CSS</span>
                         <span class="techs">JavaScript</span>
                         <span class="techs">VueJS</span>
                         <span class="techs">PHP</span>
@@ -45,8 +45,8 @@
                         <span class="techs">GIT</span>
                         <span class="techs">GitHub</span>
                         <span class="techs">Terminal</span>
-                        <span class="techs">React</span>
-                    </div>
+                        <span class="techs">React</span> -->
+                    <!-- </div> -->
                 </div>
             </div>
         </section>
@@ -55,6 +55,9 @@
             <div class="projects-container__content">
                 <h2 class="topic-title">Projects</h2>
                 <p>Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
+                <div class="projects-cards">
+
+                </div>
             </div>
         </section>
 
@@ -80,7 +83,26 @@
 
 <script>
     export default {
-        name: 'HomeView'
+        name: 'HomeView',
+        data(){
+            return{
+                technologies: null
+            }
+        },
+        methods: {
+            async getTechnologies(){
+            const req = await fetch('http://localhost:3000/technologies');
+
+            const data = await req.json();
+
+            this.technologies = data;
+
+            
+        }
+        },
+        mounted(){
+            console.log(this.getTechnologies())
+        }
     }
 </script>
 
@@ -256,8 +278,8 @@
     .about-container{
         display: flex;
         justify-content: center;
-        margin-top: 20em;
         width: 100%;
+        padding-top:10em;
     }
 
     .about-container__content{
@@ -288,7 +310,6 @@
         margin-top: 3em;
         gap: 2em;
         width: 80%;
-        margin-bottom:20em;
     }
 
     .about-details{
@@ -371,9 +392,6 @@
 
     /* PROJECTS SECTION */
 
-    .projects-container{
-        
-    }
 
 
 

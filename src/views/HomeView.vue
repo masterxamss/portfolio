@@ -33,20 +33,10 @@
                             <a href="/cv/CV_TiagoMachado.pdf" download="CV_TiagoMachado.pdf" class="about-details__btn">My CV</a>
                         </div>
                     </div>
-                    <!-- <div class="about-skills" v-for="techs in technologies" :key="techs.id">
+                    <div class="about-skills">
                         <h3>My Skills</h3>
-                        <span class="techs">{{ techs.name }}</span> -->
-                        <!-- <span class="techs">CSS</span>
-                        <span class="techs">JavaScript</span>
-                        <span class="techs">VueJS</span>
-                        <span class="techs">PHP</span>
-                        <span class="techs">MySQL</span>
-                        <span class="techs">Linux</span>
-                        <span class="techs">GIT</span>
-                        <span class="techs">GitHub</span>
-                        <span class="techs">Terminal</span>
-                        <span class="techs">React</span> -->
-                    <!-- </div> -->
+                        <span class="techs"  v-for="techs in technologies" :key="techs.id">{{ techs.name }}</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -86,7 +76,7 @@
         name: 'HomeView',
         data(){
             return{
-                technologies: null
+                technologies: null,
             }
         },
         methods: {
@@ -96,12 +86,10 @@
             const data = await req.json();
 
             this.technologies = data;
-
-            
         }
         },
         mounted(){
-            console.log(this.getTechnologies())
+            this.getTechnologies();
         }
     }
 </script>
@@ -320,7 +308,7 @@
         text-align: justify;
         padding: 1em;
         border: 1px solid var(--main-color);
-        border-radius: 5px;
+        border-radius: 15px;
         background-color: hsla(0, 0%, 97%, 0.5);
         box-shadow: 0 0 10px #353434;
         margin-bottom: 3em;
@@ -370,7 +358,7 @@
         letter-spacing: .1em;
         padding: 1em;
         border: 1px solid var(--main-color);
-        border-radius: 5px;
+        border-radius: 15px;
         background-color: hsla(0, 0%, 97%, 0.5);
         box-shadow: 0 0 10px #353434;
         margin-bottom: 3em;
@@ -391,10 +379,5 @@
     }
 
     /* PROJECTS SECTION */
-
-
-
-
-
 
 </style>

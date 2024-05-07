@@ -16,11 +16,11 @@
                 </div>
             </div>
         </section>
-
+        <!-- ABOUT SECTION -->
         <section class="about-container" id="about">
             <div class="about-container__content">
-                <h2 class="topic-title">About Me</h2>
-                <p>Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
+                <h2 class="section-title">About Me</h2>
+                <p class="desc-section">Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
                 <div class="about-separator">
                     <div class="about-details">
                         <h3>Come and get to know me</h3>
@@ -40,13 +40,18 @@
                 </div>
             </div>
         </section>
-
+          <!-- PROJECTS SECTION -->
         <section class="projects-container" id="projects">
             <div class="projects-container__content">
-                <h2 class="topic-title">Projects</h2>
-                <p>Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
+                <h2 class="section-title">Projects</h2>
+                <p class="desc-section">Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
                 <div class="projects-cards">
-
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
                 </div>
             </div>
         </section>
@@ -95,6 +100,25 @@
 </script>
 
 <style scoped>
+
+    /* USEFUL CLASSES */
+
+    .desc-section{
+        text-align: center;
+        font-family: Roboto-Regular;
+        font-size: 1.2em;
+        letter-spacing: .1em;
+        margin-top: 2em;
+    }
+
+
+    .section-title{
+        text-align: center;
+        font-family: Slabo-Regular;
+        font-size: 2em;
+        border-bottom: 2px solid var(--main-color);
+        width: fit-content;
+    }
 
     .main-container{
         background-image: url('../assets/img/bg.webp');
@@ -277,31 +301,18 @@
         align-items: center;
     }
 
-    .topic-title{
-        text-align: center;
-        font-family: Slabo-Regular;
-        font-size: 2em;
-        border-bottom: 2px solid var(--main-color);
-        width: fit-content;
-    }
-
-    .about-container__content > p{
-        text-align: center;
-        font-family: Roboto-Regular;
-        font-size: 1.2em;
-        letter-spacing: .1em;
-        margin-top: 2em;
-    }
-
     .about-separator{
         display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
         margin-top: 3em;
         gap: 2em;
         width: 80%;
     }
 
     .about-details{
-        width: 50%;
+        flex: 1 0 300px;
         font-family: Roboto-Regular;
         font-size: 1.2em;
         letter-spacing: .1em;
@@ -352,7 +363,7 @@
         box-shadow: 0 10px 20px #aaa8a8;
     }
     .about-skills{
-        width: 50%;
+        flex: 1 0 300px;
         font-family: Roboto-Regular;
         font-size: 1.2em;
         letter-spacing: .1em;
@@ -379,5 +390,43 @@
     }
 
     /* PROJECTS SECTION */
+
+    .projects-container{
+        width: 100%;
+        padding-top:10em;
+        background-color: beige;
+    }
+
+    .projects-container__content{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: yellow
+    }
+
+    .projects-cards{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width:80%;
+        min-width: 400px;
+        background-color: rgb(174, 235, 19);
+        padding: 2em;
+        gap:2em;
+        margin-top: 2em;
+    }
+
+    .card{
+        
+        background-color: whitesmoke;
+        flex: 1 0 400px;
+        height: 300px;
+    }
+
+
+
+
+
+
 
 </style>

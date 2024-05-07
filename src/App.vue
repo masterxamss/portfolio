@@ -55,7 +55,6 @@
 
   #app{
     font-family: Slabo-Regular;
-    min-width: 1040px;
     display: flex;
     flex-direction: column;
   }

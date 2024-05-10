@@ -45,15 +45,24 @@
             <div class="projects-container__content">
                 <h2 class="section-title">Projects</h2>
                 <p class="desc-section">Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
-                <div class="projects-cards">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
+                <div class="projects-cards">    
+
+                    <div class="card" v-for="project in projects" :key="project.id">
+                        <div class="card-img">
+                            <img :src="project.path_img" :alt="project.desc_img">
+                        </div>
+                        
+                        <div class="card-title">
+                            <h4>{{ project.name }}</h4>
+                            <button id="myBtn" class="modalBtn" @:click="toggleModale">View Details</button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+            <!-- @close="toggleModale"  -->
+            <Modal @close="toggleModale" :modalActive="modalActive" :projects="projects"/>
+
         </section>
 
         <div class="home-hero__socials">
@@ -73,33 +82,62 @@
                 <img src="../assets/img/social_icons/github.png" alt="Logo GitHub">
             </a>
         </div>
+        
+
     </main>
 </template>
 
-<script>
+<script defer>
+
+    import Modal from '@/components/Modal';
+    import {ref} from 'vue';
+
     export default {
         name: 'HomeView',
+        components:{
+            Modal
+        },
+        setup(){
+            const modalActive = ref(false);
+
+            const toggleModale = () => {
+                modalActive.value = !modalActive.value;
+            }
+
+            return{ modalActive, toggleModale };
+        },
         data(){
             return{
                 technologies: null,
+                projects: null,
             }
         },
-        methods: {
+        methods:{
             async getTechnologies(){
-            const req = await fetch('http://localhost:3000/technologies');
+                const req = await fetch('http://localhost:3000/technologies');
+                const data = await req.json();
+                this.technologies = data;
+            },
 
-            const data = await req.json();
-
-            this.technologies = data;
-        }
+            async getProjects(){
+                const req = await fetch('http://localhost:3000/projects');
+                const data = await req.json();
+                this.projects = data;
+            },
         },
         mounted(){
             this.getTechnologies();
-        }
+            this.getProjects();
+        },
     }
 </script>
 
 <style scoped>
+
+    .main-container{
+        background-image: url('../assets/img/bg.webp');
+        /* position: relative; */
+    }
 
     /* USEFUL CLASSES */
 
@@ -118,10 +156,6 @@
         font-size: 2em;
         border-bottom: 2px solid var(--main-color);
         width: fit-content;
-    }
-
-    .main-container{
-        background-image: url('../assets/img/bg.webp');
     }
 
     /* HERO CONTAINER */
@@ -234,7 +268,7 @@
         height: 10px;
         border-radius: 30px;
         margin-top: 10px;
-         position: relative;
+        position: relative;
     }
 
     .scrollDown span::before {
@@ -394,14 +428,13 @@
     .projects-container{
         width: 100%;
         padding-top:10em;
-        background-color: beige;
     }
 
     .projects-container__content{
         display: flex;
         align-items: center;
         flex-direction: column;
-        background-color: yellow
+        
     }
 
     .projects-cards{
@@ -410,23 +443,73 @@
         flex-wrap: wrap;
         width:80%;
         min-width: 400px;
-        background-color: rgb(174, 235, 19);
         padding: 2em;
         gap:2em;
         margin-top: 2em;
     }
 
     .card{
-        
-        background-color: whitesmoke;
         flex: 1 0 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         height: 300px;
+        border-radius: 5px;
+        border: 1.5px solid var(--main-color);
+        font-family: Roboto-Regular;
+        color:rgb(15, 15, 15);
+    }
+
+    .card:hover{
+        transform: translateY(-10px) scale(1.005) translateZ(0);
+        transition: ease-in-out .5s;
+        box-shadow: 5px 5px 15px #353434;
+    }
+
+    .card-img{
+        width: 100%;
+        height: 90%;
+    }
+    .card-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: .1px;
+        padding: .5em;
+        height: 10%;
+        background-color: var(--header-bg-color);
+        border-radius: 0 0 5px 5px;
+        border-top: 1px solid var(--main-color);
+    }
+
+    .card img{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        /* opacity: 0; */
+    }
+
+    .modalBtn{
+        background-color: var(--main-color);
+        border: 1px solid var(--main-color);
+        border-radius: 5px;
+        padding: .2em 1em;
+        cursor: pointer;
+    }
+
+    .modalBtn:hover{
+        background-color: #eb5f286b;
     }
 
 
 
-
-
-
+    /* .modal-content{
+        background-color: rgba(0, 0, 0, 0.329);
+        position:absolute;
+        top:0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    } */
 
 </style>

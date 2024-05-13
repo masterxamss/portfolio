@@ -43,7 +43,7 @@
         position: sticky;
         top: 0px;
         z-index: 1;
-        overflow: scroll;
+        overflow: scroll;;
     }
 
     .menu{

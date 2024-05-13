@@ -56,21 +56,65 @@
             "name": "CV in HTML and CSS",
             "path_img": "/img/cv.png",
             "desc_img": "Project Image",
-            "path_poject": "../assets/projects/CV/index.html"
+            "path_project": "/projects/CV/index.html",
+            "technologies":[
+                {
+                    "name": "HTML5",
+                    "tech": "html-5.png"
+                },
+                { 
+                    "name":"CSS3",
+                    "tech":"css-3.png"
+                }
+            ],
+            "github": "https://github.com/masterxamss/CV.git", 
+            "date": "07/04/2024"
         },
         {
             "id": 2,
             "name": "Cahier des Charges",
             "path_img": "/img/cdc.png",
             "desc_img": "Project Image",
-            "path_poject": "../assets/projects/CDC/cdc.pdf"
+            "path_project": "/projects/CDC/cdc.pdf",
+            "technologies":[
+                {
+                    "name": "FIGMA",
+                    "tech": "figma.png"
+                },
+                { 
+                    "name":"WORD",
+                    "tech":"word.png"
+                },
+                { 
+                    "name":"ADOBE",
+                    "tech":"square.png"
+                }
+            ],
+            "date": "21-04-2024",
+            "github": "https://github.com/masterxamss/Cahier-des-Charges.git"
         },
         {
             "id": 3,
             "name": "Espace Commentaire",
             "path_img": "/img/ec.png",
             "desc_img": "Project Image",
-            "path_poject": "../assets/projects/EspaceCommentaire/index.html"
+            "path_project": "/projects/EspaceCommentaire/index.html",
+            "technologies":[
+                {
+                    "name": "HTML5",
+                    "tech": "html-5.png"
+                },
+                { 
+                    "name":"CSS3",
+                    "tech":"css-3.png"
+                },
+                { 
+                    "name":"JAVASCRIPT",
+                    "tech":"js.png"
+                }
+            ],
+            "date": "05-05-2024",
+            "github": "https://github.com/masterxamss/espace-commentaire.git"
         }
     ]
 }

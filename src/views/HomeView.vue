@@ -7,7 +7,7 @@
                     <p>A student Web developer who builds Frontend and Backend Websites, looking for opportunities to learn and grow in order to keep up to date with the latest trends and technologies in the sector.</p>
                 </div>
                 <div class="home-hero__cta">
-                    <a class="btn">Projects</a>
+                    <a href="#projects" class="btn">Projects</a>
                 </div>
                 <div class="scroll-animation">
                     <div class="scrollDown">
@@ -46,22 +46,20 @@
                 <h2 class="section-title">Projects</h2>
                 <p class="desc-section">Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p>
                 <div class="projects-cards">    
-
-                    <div class="card" v-for="project in projects" :key="project.id">
+                    <div class="card" v-for="(project, index) in projects" :key="project.id" >
                         <div class="card-img">
                             <img :src="project.path_img" :alt="project.desc_img">
                         </div>
-                        
                         <div class="card-title">
                             <h4>{{ project.name }}</h4>
-                            <button id="myBtn" class="modalBtn" @:click="toggleModale">View Details</button>
+                            <button id="myBtn" class="modalBtn" @:click="toggleModale" v-on:click.prevent.self="projectObject = projects[index]">View Details</button>
                         </div>
-                    </div>
-
+                    </div>    
                 </div>
             </div>
             <!-- @close="toggleModale"  -->
-            <Modal @close="toggleModale" :modalActive="modalActive" :projects="projects"/>
+            <Modal @close="toggleModale" :modalActive="modalActive" :projectObject="projectObject"/>
+            <!-- :projects="projects"  -->
 
         </section>
 
@@ -104,12 +102,13 @@
                 modalActive.value = !modalActive.value;
             }
 
-            return{ modalActive, toggleModale };
+            return{ modalActive, toggleModale};
         },
         data(){
             return{
                 technologies: null,
-                projects: null,
+                projects: [],
+                projectObject: {}
             }
         },
         methods:{
@@ -124,8 +123,9 @@
                 const data = await req.json();
                 this.projects = data;
             },
+
         },
-        mounted(){
+        created(){
             this.getTechnologies();
             this.getProjects();
         },
@@ -442,17 +442,16 @@
         justify-content: space-evenly;
         flex-wrap: wrap;
         width:80%;
-        min-width: 400px;
         padding: 2em;
-        gap:2em;
+        gap: 2em;
         margin-top: 2em;
     }
 
     .card{
-        flex: 1 0 400px;
+        flex-grow: 1;
+        max-width: 400px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         height: 300px;
         border-radius: 5px;
         border: 1.5px solid var(--main-color);
@@ -495,6 +494,7 @@
         border-radius: 5px;
         padding: .2em 1em;
         cursor: pointer;
+        color:#fff;
     }
 
     .modalBtn:hover{

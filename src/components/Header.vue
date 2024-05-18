@@ -16,7 +16,7 @@
                     <a href="#projects" class="menu-item">PROJECTS</a>
                 </li>
                 <li>
-                    <a href="#" class="menu-item">CONTACT</a>
+                    <a href="#contact" class="menu-item">CONTACT</a>
                 </li>
             </ul>
         </nav>    

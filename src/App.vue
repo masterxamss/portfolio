@@ -57,6 +57,23 @@
     font-family: Slabo-Regular;
     display: flex;
     flex-direction: column;
-    /* position: relative; */
+  }
+
+  /* USEFUL CLASSES */
+  .desc-section{
+    text-align: center;
+    font-family: Roboto-Regular;
+    font-size: 1.2em;
+    letter-spacing: .1em;
+    margin-top: 2em;
+  }
+
+
+  .section-title{
+    text-align: center;
+    font-family: Slabo-Regular;
+    font-size: 2em;
+    border-bottom: 2px solid var(--main-color);
+    width: fit-content;
   }
 </style>

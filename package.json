@@ -11,9 +11,11 @@
     "@babel/core": "^7.24.5",
     "@babel/preset-env": "^7.24.5",
     "core-js": "^3.8.3",
+    "emailjs-com": "^3.2.0",
     "json-server": "^1.0.0-alpha.23",
     "vue": "^3.2.13",
     "vue-link": "^1.6.1",
+    "vue-plugin-load-script": "^2.1.1",
     "vue-router": "^4.0.3"
   },
   "devDependencies": {

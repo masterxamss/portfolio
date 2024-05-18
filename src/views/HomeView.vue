@@ -29,18 +29,19 @@
                             As far as the backend is concerned, I have ventured into the world of server and API development, using technologies such as <i>Node.js</i>, <i>Express</i> and <i>MongoDB</i> to create robust and scalable systems that boost the functionality of web applications.
                         </p>
                         <div>
-                            <a class="about-details__btn">Contact me</a>
+                            <a href="#contact" class="about-details__btn">Contact me</a>
                             <a href="/cv/CV_TiagoMachado.pdf" download="CV_TiagoMachado.pdf" class="about-details__btn">My CV</a>
                         </div>
                     </div>
                     <div class="about-skills">
                         <h3>My Skills</h3>
+                        
                         <span class="techs"  v-for="techs in technologies" :key="techs.id">{{ techs.name }}</span>
                     </div>
                 </div>
             </div>
         </section>
-          <!-- PROJECTS SECTION -->
+        <!-- PROJECTS SECTION -->
         <section class="projects-container" id="projects">
             <div class="projects-container__content">
                 <h2 class="section-title">Projects</h2>
@@ -57,10 +58,11 @@
                     </div>    
                 </div>
             </div>
-            <!-- @close="toggleModale"  -->
             <Modal @close="toggleModale" :modalActive="modalActive" :projectObject="projectObject"/>
-            <!-- :projects="projects"  -->
-
+        </section>
+        <!-- CONTACT SECTION -->
+        <section class="contact-container" id="contact">
+            <FormContact />
         </section>
 
         <div class="home-hero__socials">
@@ -87,13 +89,16 @@
 
 <script defer>
 
-    import Modal from '@/components/Modal';
+    import Modal from '@/components/Modal.vue';
+    import FormContact from '@/components/FormContact.vue';
     import {ref} from 'vue';
+
 
     export default {
         name: 'HomeView',
         components:{
-            Modal
+            Modal,
+            FormContact
         },
         setup(){
             const modalActive = ref(false);
@@ -136,26 +141,9 @@
 
     .main-container{
         background-image: url('../assets/img/bg.webp');
-        /* position: relative; */
-    }
-
-    /* USEFUL CLASSES */
-
-    .desc-section{
-        text-align: center;
-        font-family: Roboto-Regular;
-        font-size: 1.2em;
-        letter-spacing: .1em;
-        margin-top: 2em;
-    }
-
-
-    .section-title{
-        text-align: center;
-        font-family: Slabo-Regular;
-        font-size: 2em;
-        border-bottom: 2px solid var(--main-color);
-        width: fit-content;
+        /* display: flex;
+        flex-direction: column;
+        align-items: center; */
     }
 
     /* HERO CONTAINER */
@@ -501,15 +489,12 @@
         background-color: #eb5f286b;
     }
 
-
-
-    /* .modal-content{
-        background-color: rgba(0, 0, 0, 0.329);
-        position:absolute;
-        top:0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-    } */
+    .contact-container{
+        width: 100%;
+        padding-top:10em;
+        display: flex;
+        /* align-content: center; */
+        justify-content: center;
+    }
 
 </style>

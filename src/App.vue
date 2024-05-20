@@ -1,5 +1,5 @@
 <template>
-    <Header :logo="logo_src" :alt="alt_name"/>  
+    <Header/>  
     <router-view/>
     <Footer />
 </template>
@@ -13,13 +13,6 @@
     components:{
       Header,
       Footer
-    },
-
-    data(){
-      return{
-        logo_src: '/logo.png',
-        alt_name: 'Logo'
-      }
     }
   }
 </script>
@@ -46,6 +39,11 @@
     src: url(/src/assets/fonts/Roboto/Roboto-Bold.ttf) format("truetype");
   }
 
+  @font-face{
+    font-family: 'Ubuntu-Regular';
+    src: url(/src/assets/fonts/Ubuntu_Sans_Mono/static/UbuntuSansMono-Regular.ttf) format("truetype");
+  }
+
   *{
     margin: 0;
     padding: 0;
@@ -57,6 +55,7 @@
     font-family: Slabo-Regular;
     display: flex;
     flex-direction: column;
+    min-width: 428px;
   }
 
   /* USEFUL CLASSES */

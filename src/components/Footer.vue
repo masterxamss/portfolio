@@ -3,7 +3,7 @@
         <section class="footer-container_1">
             <div class="footer-content">
                 <h2>Digital Symbiosis</h2>
-                <p>A Web Developer building the Frontend and Backend of Websites and Web Applications that leads to the success of the overall product</p>
+                <p>Un développeur Web qui construit le Frontend et le Backend de sites Web et d'applications Web qui conduisent au succès du produit global.</p>
             </div>
             <div class="footer-social">
                 <h2>Social</h2>

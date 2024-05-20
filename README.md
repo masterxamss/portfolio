@@ -1,19 +1,42 @@
-# portfolio
+# My portfolio   ![imagem](https://github.com/masterxamss/portfolio/assets/133535176/d891aecb-729a-4957-97ab-259a87a26074)
 
-## Project setup
+## This is my simple portfolio as a student web developer
+#
+## Getting Started 🚀
+These instructions will lead you to make a copy on your machine
+### Prerequisites 📝
 ```
-npm install
+git@2.34.1 or higher
+node@v20.13.1 or higher
+npm@10.5.2 or higher
 ```
+## Project setup 🔧
+From your command line, first clone portfolio:
+```
+# Clone the repository
+$ git clone https://github.com/masterxamss/portfolio.git
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+# Move into the repository
+$ cd portfolio
 
-### Compiles and minifies for production
+# Remove the current origin repository
+$ git remote remove origin
 ```
-npm run build
-```
+After that, you can install the dependencies either using NPM.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Using NPM: Simply run the below commands.
+```
+# Install dependencies
+$ npm install
+$ npm install -g json-server
+$ npm install -g @vue/cli
+
+# Start the development server
+$ npm run dynamic-data
+$ npm run serve
+```
+**NOTE:** If your run into issues installing the dependencies with NPM, use this below command:
+```
+# Install dependencies with all permissions
+$ sudo npm install --unsafe-perm=true --allow-root
+```

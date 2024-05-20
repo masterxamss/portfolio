@@ -26,7 +26,7 @@
         },
         {
             "id": 7,
-            "name": "PHP"
+            "name": "React"
         },
         {
             "id": 8,
@@ -43,10 +43,6 @@
         {
             "id": 11,
             "name": "Terminal"
-        },
-        {
-            "id": 12,
-            "name": "React"
         }
     ],
 

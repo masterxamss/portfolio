@@ -174,6 +174,7 @@ export default {
 .description-section{
   margin-top: 2em;
   font-family: Roboto-Regular;
+  text-align: center;
 }
 
 @media screen and (max-width: 810px) {

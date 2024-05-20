@@ -64,7 +64,7 @@
     font-family: Roboto-Regular;
     font-size: 1.2em;
     letter-spacing: .1em;
-    margin-top: 2em;
+    margin: 2em 9em;
   }
 
 

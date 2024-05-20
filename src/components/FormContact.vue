@@ -1,7 +1,7 @@
 <template>
   <div class="form-contact__content">
     <h2 class="section-title">Contact</h2>
-    <p class="desc-section">
+    <p class="description-section">
         N'hésitez pas à me contacter en remplissant le formulaire ci-dessous et je vous répondrai dans les plus brefs délais.
     </p>
     <span id="error-msg">Veuillez remplir tous les champs</span>
@@ -169,6 +169,11 @@ export default {
   align-content: center;
   background-color: rgb(241, 132, 132);
   display: none;
+}
+
+.description-section{
+  margin-top: 2em;
+  font-family: Roboto-Regular;
 }
 
 @media screen and (max-width: 810px) {

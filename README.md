@@ -48,3 +48,7 @@ $ npm run serve
 # Install dependencies with all permissions
 $ sudo npm install --unsafe-perm=true --allow-root
 ```
+W3C validations:
+```
+/public/validator w3c
+```
